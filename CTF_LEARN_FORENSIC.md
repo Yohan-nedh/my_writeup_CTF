@@ -58,3 +58,58 @@ Et pour confirmation nous avons Le fichier source principal s’appelle flaggyFl
 
 
 
+#
+
+# Binwalk
+Dans ce défi nous avons une image
+
+<img width="480" height="320" alt="PurpleThing" src="https://github.com/user-attachments/assets/2e9f564f-df3a-4720-a150-366c7b70effc" />
+
+
+premièrement le défi s'appel **binwalk** alors nous allons utiliser cette commande
+
+<img width="700" height="150" alt="1_binwalk" src="https://github.com/user-attachments/assets/d1c74d12-48de-4826-8b8b-15c4bd279ce8" />
+
+et nous remaquons que nous avons une autre image dans l'image utilisons **dd if=PurpleThing.jpeg of=fl.png bs=1 skip=153493** qui nous permet d'extraire la photo
+
+<img width="682" height="89" alt="image" src="https://github.com/user-attachments/assets/b3a259aa-6af1-4e22-871b-a539a9df701c" />
+
+
+J'ai  nommé la photo **fl.png** et quand nous l'ouvrons bingo nous avons le flag
+
+<img width="401" height="59" alt="fl" src="https://github.com/user-attachments/assets/fcb4aa11-8744-47ff-bc53-a0d8ae108772" />
+
+#
+
+# Git is Good
+
+dans ce défi nous avons un fichier nommé **gitIsGood.zip** que nous dézippons avec la commande **unzip**
+
+<img width="669" height="815" alt="image" src="https://github.com/user-attachments/assets/d278de51-d1fa-4571-bb11-0d110eef1be1" />
+
+et nous remarquons que nous avons un fichier nommé **flag.txt** donc nous faisons ceci
+
+<img width="387" height="111" alt="image" src="https://github.com/user-attachments/assets/3c248850-e16c-482d-b449-fda87a13bdd3" />
+
+et hop voici le flag ah ah ah, non ce n'est qu'un indice rappeler vous que le nom du défi est git is good et ce que nous avons eu comme flag{REDACTED}. Le flag est dans l’historique Git, supprimé du fichier actuel (flag.txt → flag{REDACTED}), mais toujours présent dans un ancien commit. De ce fait nous allons exécuter cette commande
+**git log --all --full-history -- flag.txt**
+
+<img width="543" height="316" alt="image" src="https://github.com/user-attachments/assets/32faf1e3-ca93-4b4a-80e2-aba59ac11b1c" />
+
+maintenant pour voir ce qui été supprimer nous pouvons utiliser la commande **git show** suivi du hash 
+
+<img width="543" height="250" alt="image" src="https://github.com/user-attachments/assets/c1a38999-4379-41c9-bed7-6726470288c7" />
+
+et voici le flag: **flag{protect_your_git}**
+
+
+
+
+
+
+
+
+
+
+
+
