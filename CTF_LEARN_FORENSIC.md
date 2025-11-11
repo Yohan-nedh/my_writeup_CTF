@@ -1,4 +1,4 @@
-**Taking LS**
+# Taking LS
 
 **Résolution**
 
@@ -29,6 +29,32 @@ Donc le mot de passe du pdf est: Im The Flag
 Bingo voici le flag:
 
 <img width="500" height="67" alt="image" src="https://github.com/user-attachments/assets/135c831f-1680-4392-bcbd-680d1cac4fac" />
+
+#
+
+# I'm a dump
+
+Dans ce défi nous avec fichier nommé **file** la première étape est de vérifier la nature du fichier en utilisant la commande **file file**
+
+<img width="938" height="82" alt="image" src="https://github.com/user-attachments/assets/b2b5eac5-3fbd-4b87-95be-79ebb87ce004" />
+
+Il s'agit d'un exécutable ELF 64 bits pour Linux (x86-64), compilé avec GCC sur Arch Linux, non dépouillé (contient les symboles de débogage), et dynamiquement lié à la glibc.
+Ensuite utilisons les commandes **strings et less** pour afficher les chaînes de caractères et peut-être le flag
+
+<img width="299" height="59" alt="image" src="https://github.com/user-attachments/assets/029cf01b-ee33-4209-bcfc-1116eba1ace1" />
+
+dont la sortie est celle-ci:
+
+<img width="358" height="941" alt="image" src="https://github.com/user-attachments/assets/2cb9b0d3-5e3d-448c-ad4a-20d8233846a1" />
+
+
+voici ce que nous avons **CTFlearnH{fl4ggyfHl4g}H** mais nous remarquons que nous avons des **H** en trop et si nous les enlevons nous **CTFlearn{fl4ggyfl4g}**.
+
+Et pour confirmation nous avons Le fichier source principal s’appelle flaggyFlag.c qui nous confirme que le flag est bien celui-ci.
+
+<img width="358" height="62" alt="image" src="https://github.com/user-attachments/assets/1b412257-f284-4c7b-bde7-f9d9571102e1" />
+
+
 
 
 
